@@ -3,6 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a1a69adc-5380-4bdf-a1b5-97b0a505273d&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+      ymaps.ready(init);
+      function init(){
+          var myMap = new ymaps.Map("map", {
+              center: [55.76, 37.64],
+              zoom: 7
+          });
+      }
+    </script>
   </head>
   <body>
     <header class="page-header page-header--index">
@@ -65,7 +75,7 @@
       </section>
     </header>
 
-    < class="page-main page-main--index">
+    <main class="page-main page-main--index">
       <section class="page-main__product-week product">
         <h2 class="product__title h2-main-title">Вязанные корзинки</h2>
         <span class="product__name">Товар недели</span>
@@ -131,8 +141,11 @@
         <a href="#" class="contacts__link button button--contacts">Напишите нам</a>
       </section>
       <section class="page-main__map map">
+        <h2 class="map__title visually-hidden">Карта</h2>
+        <div id="map" style="width: 600px; height: 400px"></div>
       </section>
     </main>
+
     <footer class="page-footer page-footer--index">
       <div class="page-footer__logo logo">
         <a class="logo__link">
