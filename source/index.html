@@ -4,17 +4,6 @@
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=a1a69adc-5380-4bdf-a1b5-97b0a505273d&lang=ru_RU" type="text/javascript"></script>
-    <script type="text/javascript">
-      ymaps.ready(init);
-      function init(){
-        var myMap = new ymaps.Map("map", {
-            center: [59.938635, 30.323118],
-            zoom: 19
-        });
-        var myPlacemark = new ymaps.Placemark([59.938635, 30.323118]);
-        myMap.geoObjects.add(myPlacemark);
-      }
-    </script>
   </head>
   <body>
     <header class="page-header page-header--index">
@@ -58,6 +47,11 @@
               </li>
             </ul>
           </div>
+          <ul class="menu__submenu submenu__list">
+            <li class="submenu__item">Новые поступления</li>
+            <li class="submenu__item">Распродажа</li>
+            <li class="submenu__item submenu__item--delivery">Бесплатная доставка по России</li>
+          </ul>
         </div>
       </nav>
       <section class="page-header__banner banner">
@@ -124,8 +118,14 @@
           <span class="review__user-name">Анастасия Красильникова</span>
           <span class="review__user-tag">@misssssiskras</span>
         </div>
-        <div class="reviews__nav-left visually-hidden">влево</div>
-        <div class="reviews__nav-right visually-hidden">вправо</div>
+        <div class="reviews__nav">
+          <button class="reviews__nav-left" type="button">
+            <span class=" visually-hidden">влево</span>
+          </button>
+          <button class="reviews__nav-right" type="button">
+            <span class=" visually-hidden">вправо</span>
+          </button>
+        </div>
         <a href="#" class="reviews__link button button--reviews">Написать</a>
       </section>
       <section class="page-main__contacts contacts">
@@ -137,7 +137,7 @@
           </tr>
           <tr class="contacts__row">
             <td class="contacts__name">адрес:</td>
-            <td class="contacts__value">info@mimimishkashop.ru <br>г. Санкт-Петербург <br>ул. Большая Конюшенная <br>д. 19/8, офис 101</td>
+            <td class="contacts__value">info@mimimishkashop.ru г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</td>
           </tr>
         </table>
         <a href="#" class="contacts__link button button--contacts">Напишите нам</a>
@@ -190,5 +190,7 @@
         </a>
       </div>
     </footer>
+
+    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>
