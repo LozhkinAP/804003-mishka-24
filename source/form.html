@@ -46,14 +46,26 @@
               </li>
             </ul>
           </div>
-          <ul class="menu__submenu submenu__list">
-            <li class="submenu__item">Новые поступления</li>
-            <li class="submenu__item">Распродажа</li>
-            <li class="submenu__item submenu__item--delivery">Бесплатная доставка по России</li>
-          </ul>
         </div>
       </nav>
       <section class="page-header__section-name section-name">
+        <ul class="section-name__menu submenu">
+          <li class="submenu__item">
+            <a href="#" class="submenu__item-link">
+              <span class="submenu__item-name">Новые поступления</span>
+            </a>
+          </li>
+          <li class="submenu__item">
+            <a href="#" class="submenu__item-link">
+              <span class="submenu__item-name">Распродажа</span>
+            </a>
+          </li>
+          <li class="submenu__item">
+            <a href="#" class="submenu__item-link">
+              <span class="submenu__item-name submenu__item-name--delivery">Бесплатная доставка по России</span>
+            </a>
+          </li>
+        </ul>
         <h1 class="section-name__title">Вязание не заказ</h1>
       </section>
     </header>
@@ -62,7 +74,7 @@
       <form class="page-main__form form" action="#" >
 
         <fieldset class="form__type type">
-          <span class="form__fieldset-name">тип</span>
+          <h3 class="form__fieldset-name">тип</h3>
           <ul class="type__list">
             <li class="type__item">
               <input class="type__input" type="radio" name="type" value="interior" id="interior" checked>
@@ -76,7 +88,7 @@
         </fieldset>
 
         <fieldset class="form__color color">
-          <span class="form__fieldset-name">цвет</span>
+          <h3 class="form__fieldset-name">цвет</h3>
           <ul class="color__list">
             <li class="color__item">
               <input class="color__input" type="checkbox" name="color" value="white" id="white" checked>
@@ -105,21 +117,27 @@
           </ul>
         </fieldset>
 
+        <fieldset class="form__fio fio">
+          <h3 class="form__fieldset-name">ФИО</h3>
+          <ul class="fio__list">
+            <li class="fio__item">
+              <label class="fio__name" for="firstname">Имя</label>
+              <input class="fio__input" type="text" name="firstname" value="" id="firstname" placeholder="Введите ваше имя*">
+            </li>
+            <li class="fio__item">
+              <label class="fio__name" for="secondname">Фамилия</label>
+              <input class="fio__input" type="text" name="secondname" value="" id="secondname" placeholder="Укажите фамилию*">
+            </li>
+            <li class="fio__item">
+              <label class="fio__name" for="patronymic">Отчество</label>
+              <input class="fio__input" type="text" name="patronymic" value="" id="patronymic" placeholder="Отчество, если желаете*">
+            </li>
+          </ul>
+        </fieldset>
+
         <fieldset class="form__contacts form-contacts">
-          <span class="form__fieldset-name">ФИО</span>
+          <h3 class="visually-hidden">Контакты</h3>
           <ul class="form-contacts__list">
-            <li class="form-contacts__item">
-              <label class="form-contacts__name" for="firstname">Имя</label>
-              <input class="form-contacts__input" type="text" name="firstname" value="" id="firstname" placeholder="Введите ваше имя*">
-            </li>
-            <li class="form-contacts__item">
-              <label class="form-contacts__name" for="secondname">Фамилия</label>
-              <input class="form-contacts__input" type="text" name="secondname" value="" id="secondname" placeholder="Укажите фамилию*">
-            </li>
-            <li class="form-contacts__item">
-              <label class="form-contacts__name" for="patronymic">Отчество</label>
-              <input class="form-contacts__input" type="text" name="patronymic" value="" id="patronymic" placeholder="Отчество, если желаете*">
-            </li>
             <li class="form-contacts__item form-contacts__item--phone">
               <label class="form-contacts__name form__fieldset-name " for="phone">Тел</label>
               <input class="form-contacts__input" type="tel" name="phone" value="" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
@@ -142,13 +160,16 @@
           </ul>
         </fieldset>
 
-        <div class="form__addinfo addinfo">
+        <fieldset class="form__addinfo addinfo">
           <label class="form__label-name addinfo__name" for="addinfo">Доп</label>
-          <input class="addinfo__input" type="text" name="addinfo" value="" id="addinfo" placeholder="Опишите все ваши пожелания к заказу">
-        </div>
-        <span class="form__require">*Поля обязательны для заполнения</span>
+          <input class="addinfo__input" type="textarea" name="addinfo" value="" id="addinfo" placeholder="Опишите все ваши пожелания к заказу">
+        </fieldset>
 
-        <button class="form__button">Отправить заказ</button>
+        <div class="form__button-wrap">
+          <span class="form__require">*Поля обязательны для заполнения</span>
+          <button class="form__button">Отправить заказ</button>
+        </div>
+
       </form>
     </main>
     <footer class="page-footer page-footer--form">
