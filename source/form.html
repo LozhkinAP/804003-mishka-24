@@ -2,11 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Мишка</title>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=a1a69adc-5380-4bdf-a1b5-97b0a505273d&lang=ru_RU" type="text/javascript"></script>
+    <title>HTML Academy: Мишка - Форма заказа</title>
   </head>
   <body>
-    <header class="page-header page-header--index">
+    <header class="page-header page-header--form">
       <nav class="page-header__navigation navigation">
         <div class="navigation__logo logo">
           <a class="logo__link">
@@ -49,8 +48,8 @@
           </div>
         </div>
       </nav>
-      <section class="page-header__banner banner">
-        <ul class="banner__menu submenu">
+      <section class="page-header__section-name section-name">
+        <ul class="section-name__menu submenu">
           <li class="submenu__item">
             <a href="#" class="submenu__item-link">
               <span class="submenu__item-name">Новые поступления</span>
@@ -67,98 +66,114 @@
             </a>
           </li>
         </ul>
-        <h1 class="banner__title">Милые штуки ручной работы для дома</h1>
-        <ul class="banner__catalog-section catalog-section">
-          <li class="catalog-section__item">
-            <a href="#" class="catalog-section__link">
-              <span class="catalog-section__name catalog-section__name--interior">Предметы интерьера</span>
-            </a>
-          </li>
-          <li class="catalog-section__item">
-            <a href="#" class="catalog-section__link">
-              <span class="catalog-section__name catalog-section__name--childtoys">Детские игрушки</span>
-            </a>
-          </li>
-        </ul>
+        <h1 class="section-name__title">Вязание не заказ</h1>
       </section>
     </header>
-    <main class="page-main page-main--index">
-      <section class="page-main__product-week product">
-        <h2 class="product__title h2-main-title">Вязанные корзинки</h2>
-        <span class="product__name">Товар недели</span>
-        <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-        <table class="product__param param">
-          <tr class="param__row">
-            <td class="param__name">Цвет:</td>
-            <td class="param__value">тиффани/серый</td>
-          </tr>
-          <tr class="param__row">
-            <td class="param__namel">Диаметр:</td>
-            <td class="param__value">25 см</td>
-          </tr>
-          <tr class="param__row">
-            <td class="param__name">Высота:</td>
-            <td class="param__value">15 см</td>
-          </tr>
-        </table>
-        <div class="product__picture">
-          <img class="product__image" src="img/prod-week.svg" alt="Продукт недели">
+    <main class="page-main page-main--form">
+      <h2 class="page-main__title visually-hidden">Форма заказа</h2>
+      <form class="page-main__form form" action="#" >
+
+        <fieldset class="form__type type">
+          <h3 class="form__fieldset-name">тип</h3>
+          <ul class="type__list">
+            <li class="type__item">
+              <input class="type__input" type="radio" name="type" value="interior" id="interior" checked>
+              <label class="type__name" for="interior">Аксессуары для интерьера</label>
+            </li>
+            <li class="type__item">
+              <input class="type__input" type="radio" name="type" value="childtoy" id="childtoy">
+              <label class="type__name" for="childtoy">Детская игрушка</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__color color">
+          <h3 class="form__fieldset-name">цвет</h3>
+          <ul class="color__list">
+            <li class="color__item">
+              <input class="color__input" type="checkbox" name="color" value="white" id="white" checked>
+              <label class="color__name" for="white">белый</label>
+            </li>
+            <li class="color__item">
+              <input class="color__input" type="checkbox" name="color" value="grey" id="grey" checked>
+              <label class="color__name" for="grey">серый</label>
+            </li>
+            <li class="color__item">
+              <input class="color__input" type="checkbox" name="color" value="tiffany" id="tiffany">
+              <label class="color__name" for="tiffany">тиффани</label>
+            </li>
+            <li class="color__item">
+              <input class="color__input" type="checkbox" name="color" value="black" id="black">
+              <label class="color__name" for="black">черный</label>
+            </li>
+            <li class="color__item">
+              <input class="color__input" type="checkbox" name="color" value="pink" id="pink">
+              <label class="color__name" for="pink">розовый</label>
+            </li>
+            <li class="color__item">
+              <input class="color__input" type="checkbox" name="color" value="orange" id="orange">
+              <label class="color__name" for="orange">оранжевый</label>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__fio fio">
+          <h3 class="form__fieldset-name">ФИО</h3>
+          <ul class="fio__list">
+            <li class="fio__item">
+              <label class="fio__name" for="firstname">Имя</label>
+              <input class="fio__input" type="text" name="firstname" value="" id="firstname" placeholder="Введите ваше имя*">
+            </li>
+            <li class="fio__item">
+              <label class="fio__name" for="secondname">Фамилия</label>
+              <input class="fio__input" type="text" name="secondname" value="" id="secondname" placeholder="Укажите фамилию*">
+            </li>
+            <li class="fio__item">
+              <label class="fio__name" for="patronymic">Отчество</label>
+              <input class="fio__input" type="text" name="patronymic" value="" id="patronymic" placeholder="Отчество, если желаете*">
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__contacts form-contacts">
+          <h3 class="visually-hidden">Контакты</h3>
+          <ul class="form-contacts__list">
+            <li class="form-contacts__item form-contacts__item--phone">
+              <label class="form-contacts__name form__fieldset-name " for="phone">Тел</label>
+              <input class="form-contacts__input" type="tel" name="phone" value="" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.2">
+                <path d="M17.4395 24C17.0363 24 16.7339 24 16.3306 24C11.3911 23.4074 7.7621 21.1358 5.14113 18.2717C2.52016 15.4075 0.403226 11.7532 0 6.7162C0 6.22237 0 5.82731 0 5.33349C0.100806 4.44461 0.504032 3.85202 1.10887 3.25943C1.71371 2.56808 2.72177 1.77796 3.62903 1.6792C4.33468 1.6792 5.44355 2.17302 5.84677 2.76561C6.25 3.25943 6.45161 4.34584 6.65323 5.13596C6.85484 6.02484 7.25806 7.11125 7.15726 7.90137C6.95565 9.08655 5.34274 9.58037 4.93952 10.4693C6.55242 14.1235 9.07258 16.889 12.5 18.6667C13.3065 18.1729 14.1129 16.7902 15.3226 16.7902C15.7258 16.7902 16.3306 16.9877 16.7339 17.0865C17.2379 17.1852 17.6411 17.3828 18.0444 17.5803C18.75 17.8766 20.0605 18.1729 20.4637 18.7655C20.8669 19.3581 21.1694 20.3457 21.0685 20.9383C20.7661 22.2222 18.6492 23.6049 17.4395 24Z" fill="black"/>
+                <path d="M12.6008 1.48147C18.5484 1.48147 23.4879 6.22217 23.4879 12.1481H25C25 5.43205 19.4556 0 12.6008 0V1.48147Z" fill="black"/>
+                <path d="M12.6008 9.18506V10.7653C13.4073 10.7653 14.0121 11.3579 14.0121 12.148H15.625C15.625 10.5678 14.3145 9.18506 12.6008 9.18506Z" fill="black"/>
+                <path d="M12.6008 6.12356C15.9274 6.12356 18.75 8.79021 18.75 12.1482H20.3629C20.3629 8.00009 16.9355 4.64209 12.7016 4.64209V6.12356H12.6008Z" fill="black"/>
+                </g>
+              </svg>
+            </li>
+            <li class="form-contacts__item form-contacts__item--email">
+              <label class="form-contacts__name form__fieldset-name " for="email">e-mail</label>
+              <input class="form-contacts__input" type="email" name="email" value="" id="email" placeholder="Ваш e-mail*">
+              <svg width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.2" d="M28 0H4C1.8 0 0 1.8 0 4V17C0 19.2 1.8 21 4 21H28C30.2 21 32 19.2 32 17V4C32 1.8 30.2 0 28 0ZM2 5.3L9 10.6L2 15.9V5.3ZM30 17C30 18.1 29.1 19 28 19H4C2.9 19 2 18.1 2 17L9.8 11.1L14.2 14.4C14.7 14.8 15.4 15 16 15C16.6 15 17.3 14.8 17.8 14.4L22.2 11.1L30 17ZM30 15.8L23 10.5L30 5.2V15.8ZM17.2 13.6C16.8 13.9 16.4 14 16 14C15.6 14 15.1 13.9 14.8 13.6L10.7 10.5L9.9 9.9L2 4C2 2.9 2.9 2 4 2H28C29.1 2 30 2.9 30 4L17.2 13.6Z" fill="black"/>
+              </svg>
+            </li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="form__addinfo addinfo">
+          <label class="form__label-name addinfo__name" for="addinfo">Доп</label>
+          <textarea class="addinfo__input" name="addinfo" value="" id="addinfo" placeholder="Опишите все ваши пожелания к заказу">
+          </textarea>
+        </fieldset>
+
+        <div class="form__button-wrap">
+          <span class="form__require">*Поля обязательны для заполнения</span>
+          <button class="form__button" type="submit">Отправить заказ</button>
         </div>
-        <div class="product__price">
-          <span class="product__price-value">Цена: 990 руб</span>
-        </div>
-        <a href="#" class="product__link button button--product">Заказать</a>
-      </section>
-      <section class="page-main__about about">
-        <h2 class="about__title h2-main-title">Коротко о нас:</h2>
-        <ul class="about__list">
-          <li class="about__item about__item--eco">Экологически чистые материалы</li>
-          <li class="about__item about__item--style">Скандинавский стиль по российской цене</li>
-          <li class="about__item about__item--like">Увеличивает лайки на фотографиях</li>
-          <li class="about__item about__item--love">Связано вручную с любовью и умилением</li>
-          <li class="about__item about__item--blighty">Поддержка отечественного производителя</li>
-          <li class="about__item about__item--podarok">Поставляется в подарочной упаковке</li>
-        </ul>
-      </section>
-      <section class="page-main__reviews reviews">
-        <h2 class="reviews__title h2-main-title">Отзывы</h2>
-        <div class="reviews__wrap review">
-          <p class="review__description">
-            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-          </p>
-          <span class="review__user-name">Анастасия Красильникова</span>
-          <span class="review__user-tag">@misssssiskras</span>
-        </div>
-        <div class="reviews__nav">
-          <button class="reviews__nav-left" type="button">
-            <span class=" visually-hidden">влево</span>
-          </button>
-          <button class="reviews__nav-right" type="button">
-            <span class=" visually-hidden">вправо</span>
-          </button>
-        </div>
-        <a href="#" class="reviews__link button button--reviews">Написать</a>
-      </section>
-      <section class="page-main__contacts contacts">
-        <h2 class="contacts__title visually-hidden">Контакты</h2>
-        <table class="contacts__list">
-          <tr class="contacts__row">
-            <td class="contacts__name">e-mail:</td>
-            <td class="contacts__value">info@mimimishkashop.ru</td>
-          </tr>
-          <tr class="contacts__row">
-            <td class="contacts__name">адрес:</td>
-            <td class="contacts__value">info@mimimishkashop.ru г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</td>
-          </tr>
-        </table>
-        <a href="#" class="contacts__link button button--contacts">Напишите нам</a>
-      </section>
-      <section class="page-main__map map">
-        <h2 class="map__title visually-hidden">Карта</h2>
-        <div id="map" style="width: 100%; height: 457px"></div>
-      </section>
+
+      </form>
     </main>
-    <footer class="page-footer page-footer--index">
+    <footer class="page-footer page-footer--form">
       <div class="page-footer__logo logo">
         <a class="logo__link">
           <img class="logo__image" src="img/logo-footer.svg" alt="Логотип Мишка" >
@@ -200,6 +215,5 @@
         </a>
       </div>
     </footer>
-    <script src="js/script.js" type="text/javascript"></script>
   </body>
 </html>
