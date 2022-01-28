@@ -1,0 +1,61 @@
+.video {
+  position: relative;
+  background-image: url("../img/video-mobile.png") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 150px;
+  height: auto;
+  background-position: 50% 50%;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/video-tablet.png");
+    min-height: 455px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    left: 0px;
+    background-image: url("../img/video-desktop.png");
+    min-height: 455px;
+    width: 683px;
+    background-size: 683px 455px;
+  }
+}
+
+.video__play-button {
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  @include resetbuttoncss();
+  width: 101px;
+  height: 77px;
+
+  @media (min-width: $tablet-width) {
+    width: 101px;
+    height: 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 101px;
+    height: 77px;
+  }
+
+  &:hover > svg  {
+    width: 120%;
+    height: auto;
+    transform: translate(-10px, -10px);
+  }
+
+  &:active > svg path#bckg {
+    fill: #ffffff;
+    fill-opacity: 0.3;
+  }
+
+  &:active > svg {
+    background-color: #63D1BB;
+    border-radius: 15px;
+    width: 80%;
+    height: auto;
+    transform: translate(0px, 0px);
+  }
+}

@@ -1,0 +1,27 @@
+.htmlacademy__title {
+  margin-right: 27px;
+  font-size: 19px;
+  @include fontbold();
+}
+
+.htmlacademy {
+  height: 80px;
+  border-top: 1px solid;
+  border-color: #E5E5E5;
+  box-sizing: border-box;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 50px;
+    margin-left: auto;
+    border: none;
+  }
+}
+
+.htmlacademy__link {
+  height: 34px;
+}

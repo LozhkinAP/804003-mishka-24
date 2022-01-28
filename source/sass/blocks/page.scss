@@ -1,0 +1,28 @@
+.page {
+  height: 100%;
+  @include fontnormal();
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.page__body {
+  min-height: 100%;
+  margin: 0;
+  color: $colorTitle;
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    max-width: $desktop-width;
+  }
+  
+}
+
+.page img {
+  max-width: 100%;
+  height: auto;
+}
+
+.page a {
+  text-decoration: none;
+}
+

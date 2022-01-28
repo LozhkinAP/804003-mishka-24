@@ -1,0 +1,28 @@
+.goods-param {
+  margin-top: 6px;
+  border-bottom: 1px solid #ECECEC;
+  padding-bottom: 17.5px;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
+}
+
+.goods-param__value {
+  @include fontnormal();
+  font-size: 13px;
+  line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 6.5px;
+    font-size: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
+}

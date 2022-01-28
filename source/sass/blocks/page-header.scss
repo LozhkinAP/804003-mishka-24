@@ -1,0 +1,14 @@
+.page-header {
+  color: $colorTitle;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header__banner {
+  width: 100%;
+}
+
+.page-header--catalog .page-header__banner {
+
+
+}

@@ -1,0 +1,28 @@
+.param__row {
+  height: 40px;
+  border-bottom: 1px #ececec solid;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 58px;
+    width: 292px;
+  }
+}
+
+.param__name {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  flex-basis: 97px;
+}
+
+.param__value {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}

@@ -1,0 +1,161 @@
+.about__title {
+  margin-top: 31px;
+}
+
+.about__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about__item-text {
+  font-size: 17px;
+  line-height: 20px;
+  @include fontbold();
+}
+
+.about__item {
+  margin-top: 83px;
+  height: 40px;
+  position: relative;
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background-repeat: no-repeat;
+  }
+
+  &--eco::before {
+    background-image: url(../img/about--eco.svg);
+    width: 33px;
+    height: 38px;
+    bottom: 56px;
+    left: 5px;
+  }
+
+  &--style::before {
+    background-image: url(../img/about--style.svg);
+    width: 47px;
+    height: 27px;
+    bottom: 66px;
+    left: 0px;
+  }
+
+  &--like::before {
+    background-image: url(../img/about--like.svg);
+    width: 34px;
+    height: 27px;
+    bottom: 51px;
+    left: 5px;
+  }
+
+  &--love::before {
+    background-image: url(../img/about--love.svg);
+    width: 35px;
+    height: 34px;
+    bottom: 47px;
+    left: 0px;
+  }
+
+  &--blighty::before {
+    background-image: url(../img/about--blighty.svg);
+    width: 55px;
+    height: 23px;
+    bottom: 66px;
+    left: -5px;
+  }
+
+  &--podarok::before {
+    background-image: url(../img/about--podarok.svg);
+    width: 33px;
+    height: 32px;
+    bottom: 60px;
+    left: 0px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+  .about__title {
+    margin-top: 0px;
+  }
+
+  .about__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 700px;
+  }
+
+  .about__title {
+    margin-right: 50px;
+  }
+
+  .about__item {
+    flex-basis: 50%;
+    margin-top: 120px;
+
+    &:nth-child(1) {
+      order: 1;
+      margin-top: 110px;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 5;
+    }
+
+    &:nth-child(4) {
+      order: 2;
+      margin-top: 110px;
+    }
+
+    &:nth-child(5) {
+      order: 4;
+    }
+
+    &:nth-child(6) {
+      order: 6;
+    }
+
+    &--eco::before {
+      bottom: 62px;
+    }
+
+    &--style::before {
+      bottom: 70px;
+    }
+
+    &--like::before {
+      bottom: 65px;
+    }
+
+    &--love::before {
+      bottom: 53px;
+    }
+
+    &--blighty::before {
+      bottom: 72px;
+    }
+
+    &--podarok::before {
+      bottom: 65px;
+    }
+  }
+
+  .about__item-text {
+    display: inline-block;
+    max-width: 325px;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+}
+
+@media (min-width: $desktop-width) {
+  .about__title {
+  }
+}

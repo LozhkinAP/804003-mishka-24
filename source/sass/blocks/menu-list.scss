@@ -1,0 +1,233 @@
+.menu-list--open {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 100500;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+  }
+}
+
+.menu-list__item {
+
+  flex-basis: 80px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 0px #ECECEC, inset 0px 1px 0px #ECECEC;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    flex-basis: auto;
+    box-shadow: none;
+    background-color: none;
+  }
+}
+
+.menu-list__item:first-child {
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    left: 50px;
+    top: 110px;
+    width: 171px;
+    z-index: 99;
+    background: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    margin-left: 50px;
+    width: 190px;
+    background: none;
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      display: block;
+      content: "";
+      width: 1px;
+      height: 88px;
+      background: #000000;
+      mix-blend-mode: normal;
+      opacity: 0.1;
+    }
+  }
+}
+
+.menu-list__item:first-child .menu-list__link {
+
+  margin-left: 76px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 39px;
+    margin-left: 0px;
+  }
+}
+
+.menu-list__item:nth-child(2) {
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 110px;
+    left: 220px;
+    z-index: 99;
+    background: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: static;
+    margin-left: 35px;
+    background: none;
+  }
+}
+
+.menu-list__item:nth-child(2) .menu-list__link {
+
+  margin-left: 76px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0px;
+  }
+}
+
+.menu-list__item:nth-child(3) {
+
+  @media (min-width: $tablet-width) {
+    width: 84px;
+    margin-left: 0px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+  }
+}
+
+.menu-list__item:nth-child(3) .menu-list__link {
+
+  margin-left: 32px;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    margin-left: 32px;
+    margin-right: 31px;
+  }
+}
+
+.menu-list__item:nth-child(3) .menu-list__name {
+
+  margin-left: 22px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.menu-list__item:nth-child(3)::before {
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 88px;
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+  }
+}
+
+
+.menu-list__item:last-child::before {
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 88px;
+    background: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+  }
+}
+
+.menu-list__item:last-child {
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+    width: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+}
+
+.menu-list__item:last-child .menu-list__link {
+
+  margin-left: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 32px;
+    height: 18px;
+  }
+}
+
+.menu-list__item:last-child .menu-list__name--basket {
+
+  margin-left: 21px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 25px;
+    margin-left: 0px;
+    font-size: 17px;
+  }
+}
+
+.menu-list__item:last-child .menu-list__link:hover > svg path,
+.menu-list__item:nth-child(3) .menu-list__link:hover > svg path {
+  fill: #63D1BB;
+  opacity: 1;
+}
+
+.menu-list__item:last-child .menu-list__link:active > svg path,
+.menu-list__item:nth-child(3) .menu-list__link:active > svg path {
+  fill: #63D1BB;
+  opacity: 0.3;
+}
+
+.menu-list__item:last-child .menu-list__link:hover > .menu-list__name,
+.menu-list__item:first-child .menu-list__link:hover, 
+.menu-list__item:nth-child(2) .menu-list__link:hover {
+  opacity: 0.6;
+}
+
+.menu-list__item:last-child .menu-list__link:active > .menu-list__name,
+.menu-list__item:first-child .menu-list__link:active, 
+.menu-list__item:nth-child(2) .menu-list__link:active {
+  opacity: 0.3;
+}
+
+.menu-list__name {
+
+  font-size: 17px;
+  line-height: 24px;
+  @include fontbold();
+  color: $colorTitle;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 17px;
+  }
+}

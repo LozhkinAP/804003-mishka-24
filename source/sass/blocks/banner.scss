@@ -1,0 +1,115 @@
+.banner--catalog::after {
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    content: "";
+    background-image: url("/img/zigzag--catalog-tablet.svg");
+    background-repeat: repeat;
+    height: 12px;
+    background-color: #f1f1f1;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("/img/zigzag--catalog-desktop.svg");
+    background-repeat: repeat;
+    height: 17px;
+  }
+}
+
+.banner--catalog 
+
+  .banner__wrap {
+    background-image: none; 
+    background-color: #f1f1f1;
+    height: 177px; 
+
+    @media (min-width: $tablet-width) {
+      height: 214px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 238px;
+    }
+
+  .banner__title {
+
+    @media (min-width: $tablet-width) {
+      padding-top: 101px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 35px;
+    }
+  }
+
+}
+
+.banner {
+  
+  @media (min-width: $tablet-width) {
+    background-color: #fafafa;
+    position: relative;
+  }
+}
+
+.banner__wrap {
+  background-image: url(../img/banner.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 20%;
+  height: 282px;
+  background-color: #fafafa;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/hero--tablet.jpg");
+    background-position: 50% 0;
+    height: 627px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero--tablet@2x.jpg");
+      background-size: 768px auto;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -20px;
+    background-image: url("../img/hero--desktop.jpg");
+    background-position: 50% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero--desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
+  }
+}
+
+.banner__title {
+  @include fontbold();
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  padding-top: 73px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 155px;
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 130px;
+    width: 700px;
+  }
+}
+
+.banner__title--br {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+}
+
