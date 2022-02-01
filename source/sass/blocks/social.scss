@@ -20,4 +20,13 @@
 
 .social__link {
   display: flex;
+
+  &:hover > svg path {
+    fill: #46C1AE;
+  }
+
+  &:active > svg path {
+    fill: #46C1AE;
+    fill-opacity: 0.3;
+  }
 }

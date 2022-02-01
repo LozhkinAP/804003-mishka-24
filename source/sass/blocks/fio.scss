@@ -1,0 +1,91 @@
+.fio {
+  margin-top: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.fio__list {
+  @include resetullistcss();
+
+  @media (min-width: $tablet-width) {
+    margin-left: 110px;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 50px;
+  }
+}
+
+.fio__name {
+  font-size: 17px;
+  line-height: 17px;
+  @include fontbold();
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 19px;
+    padding-top: 15px; 
+  }
+}
+
+.fio__item {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+.fio__item:nth-child(1) {
+  margin-top: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0px;
+  }
+}
+
+.fio__input {
+  border: none;
+  height: 52px;
+  padding: 0;
+  font-size: 17px;
+  line-height: 17px;
+  box-shadow: inset 0px -2px 0px #000000;
+
+  @media (min-width: $tablet-width) {
+    font-size: 19px;
+    line-height: 19px;
+    width: 100%;
+    margin-left: 25px;
+    padding-left: 18px;
+  }
+
+  &::placeholder {
+    color: #b3b3b3;
+  }
+}
+
+.fio__input:hover,
+.fio__input:active,
+.fio__input:focus {
+  box-shadow: inset 0px -2px 0px #62D1BA;
+  outline: 0;
+  outline-offset: 0;
+}
+
+.fio__name-title {
+
+  @media (min-width: $tablet-width) {
+    padding-top: 15px;
+  }
+}

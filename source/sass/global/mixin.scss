@@ -17,3 +17,15 @@
   font-style: normal;
   font-weight: normal;
 }
+@mixin resetfieldsetcss {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+@mixin resetullistcss {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+

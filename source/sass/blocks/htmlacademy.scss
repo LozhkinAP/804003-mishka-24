@@ -24,4 +24,13 @@
 
 .htmlacademy__link {
   height: 34px;
+
+  &:hover > svg path {
+    fill: #46C1AE;
+  }
+
+  &:active > svg path {
+    fill: #46C1AE;
+    fill-opacity: 0.3;
+  }
 }

@@ -3,6 +3,11 @@
     margin-right: auto;
 }
 
-.logo-footer__link:hover > #f-logo path {
+.logo-footer__link:hover > svg path {
     fill: #46C1AE;
+}
+
+.logo-footer__link:active > svg path {
+    fill: #46C1AE;
+    fill-opacity: 0.3;
 }
